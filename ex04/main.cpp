@@ -21,7 +21,7 @@ int main(int argc, char **argv)
     }
 
     std::ifstream inputFile(FileName.c_str());
-    if (inputFile)
+    if (!inputFile)
     {
         std::cerr << "Error: Cannot open input file." << std::endl;
         return (1);
